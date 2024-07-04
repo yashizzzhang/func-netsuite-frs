@@ -4,7 +4,7 @@ import modules.task
 
 app = func.FunctionApp()
 
-@app.schedule(schedule="0 0 7 * * *", arg_name="myTimer", run_on_startup=False, use_monitor=True) 
+@app.schedule(schedule="0 17 * * * *", arg_name="myTimer", run_on_startup=False, use_monitor=True) 
 def func_netsuite_frs(myTimer: func.TimerRequest) -> None:
     if myTimer.past_due:
         logging.info('The timer is past due!')
