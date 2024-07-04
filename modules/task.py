@@ -12,16 +12,6 @@ def main():
 
     from azure.keyvault.secrets import SecretClient
     from azure.identity import DefaultAzureCredential
-    import json
-
-    def load_env_from_json(file_path):
-        with open(file_path) as f:
-            config = json.load(f)
-            for key, value in config.get("Values", {}).items():
-                os.environ[key] = value
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    file_path = os.path.join(current_dir, '..', 'local.settings.json')
-    load_env_from_json(file_path)
 
     ## credential obtained from managed identity or azure login, to access azure SQL and KV
     def_credential = DefaultAzureCredential()
