@@ -1,0 +1,12 @@
+# DO NOT include azure-functions-worker in this file
+# The Python Worker is managed by Azure Functions platform
+# Manually managing azure-functions-worker may cause unexpected issues
+
+azure-functions
+azure-identity
+gspread==6.1.2
+gspread-dataframe==3.3.1
+pandas==2.2.2
+numpy==1.26.4
+pygsheets
+azure-keyvault-secrets==4.8.0
