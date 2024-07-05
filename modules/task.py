@@ -30,7 +30,7 @@ def main():
     realm = kv_client.get_secret('PRD-REALM').value
     gcp_sa = kv_client.get_secret('PRD-GCP-SERVICE-ACCOUNT').value
 
-    from ns_data_extractor_api import Netsuite
+    from .ns_data_extractor_api import Netsuite
     ns = Netsuite(account_id, realm, consumer_key, consumer_secret, token_id, token_secret, script)
 
     """## Global Parameters"""
